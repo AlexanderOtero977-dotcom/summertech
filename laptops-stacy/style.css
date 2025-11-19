@@ -1,0 +1,123 @@
+body {
+    background: #050505;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 30px 0;
+}
+
+.tagline {
+    color: #00eaff;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.glow {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: #00eaff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-shadow: 0 0 8px #00eaff;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: #0d0d0d;
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 0 15px #00eaff55;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.back {
+    display: block;
+    margin: 20px;
+    color: #00eaff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    color: #00eaff;
+}
+/* --- Efecto LED al hacer click --- */
+.click-efecto {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 255, 255, 0.7);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: boom 0.8s ease-out forwards;
+    box-shadow: 0 0 15px rgba(0,255,255,0.9);
+}
+
+@keyframes boom {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(12); opacity: 0; }
+}
+/* --- Foto de Stacy --- */
+.stacy-container {
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.stacy-foto {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid cyan;
+    box-shadow: 0 0 25px cyan;
+    transition: 0.3s ease-in-out;
+}
+
+.stacy-foto:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px rgb(0, 200, 255), 0 0 60px rgb(0, 120, 255);
+}
